@@ -1,0 +1,17 @@
+{
+  "name": "autojs-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch scripts/connect.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "@types/node": "^22.15.24",
+    "autojs6-tcp": "workspace:*"
+  }
+}

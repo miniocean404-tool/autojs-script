@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "rootDir": ".", // 根目录
+    "outDir": "dist", // 输出目录
+
+    "target": "ESNext", // 指定 ECMAScript 目标版本
+    "module": "ESNext", // 指定模块代码生成
+    "moduleResolution": "bundler", // 模块解析策略
+    "allowJs": true, // 允许编译 JS 文件
+    "resolveJsonModule": true, // 允许导入 JSON 模块
+    "esModuleInterop": true, // 发出额外的 JavaScript 来简化对导入 CommonJS 模块的支持
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入
+    "allowImportingTsExtensions": true, // 允许导入带有 .ts 扩展名的文件
+    "sourceMap": true, // 生成 sourceMap 文件
+    "removeComments": false, // 保留注释
+    "preserveConstEnums": true, // 保留 const 和 enum 声明
+    "forceConsistentCasingInFileNames": true, // 用于强制检查文件路径的大小写一致性
+    "useDefineForClassFields": false, // 使用 defineProperty 来定义类字段, 开启需要 es2022 的支持，关闭可以兼容旧浏览器
+
+    "declaration": true, // 生成声明文件
+    "emitDeclarationOnly": true, // 只生成声明文件
+    "skipLibCheck": true, // 跳过库文件的类型检查
+
+    "experimentalDecorators": true, // 启用装饰器
+    "emitDecoratorMetadata": true, // 启用装饰器元数据
+
+    "strict": true,
+    "strictNullChecks": true, // 启用严格的 null 检查
+    "noImplicitAny": false, // 禁用隐式 any 类型检查
+    "noUnusedLocals": false, // 关闭本地变量未被读取时的错误
+    "noUnusedParameters": false, // 关闭未使用的参数错误
+    "noImplicitReturns": true, // 函数没有返回值时的错误
+    "noFallthroughCasesInSwitch": true, // 检查 switch 语句中的 case 是否“贯穿”（即没有显式使用 break 或 return 等终止语句）。如果发现未处理的贯穿，会抛出编译错误
+    "noUncheckedSideEffectImports": false // false 时（默认值），允许导入可能带有副作用（Side Effects）的模块而不需要显式标记。如果设置为 true，TypeScript 会要求所有导入的模块必须显式声明是否有副作用（例如通过 "sideEffects": false 在 package.json 中标记）。
+  },
+  "include": ["./scripts"],
+  "compileOnSave": false
+}

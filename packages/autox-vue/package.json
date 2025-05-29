@@ -1,0 +1,41 @@
+{
+  "name": "webui-autox-vite-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "dev-autox": "node scrpits/dev-autox.mjs",
+    "build": "vite build",
+    "build-autox": "node scrpits/build-autox.mjs",
+    "save-autox": "node scrpits/save-autox.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "framework7": "^8.3.4",
+    "framework7-vue": "^8.3.4",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@babel/core": "7.27.3",
+    "@babel/preset-env": "7.27.2",
+    "@rollup/plugin-babel": "6.0.4",
+    "@rollup/plugin-commonjs": "28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "16.0.1",
+    "@rollup/plugin-replace": "6.0.2",
+    "@rollup/plugin-terser": "0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@vitejs/plugin-vue": "5.2.4",
+    "@vue/tsconfig": "0.7.0",
+    "archiver": "7.0.1",
+    "autox-v6-api": "1.0.5",
+    "axios": "1.9.0",
+    "fs-extra": "11.3.0",
+    "inquirer": "12.6.3",
+    "rollup": "^4.41.1",
+    "typescript": "5.8.3",
+    "vite": "6.3.5",
+    "@autojs/types-pro8": "8.8.0"
+  }
+}
