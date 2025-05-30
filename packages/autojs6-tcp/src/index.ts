@@ -1,4 +1,5 @@
-import { createVitePlugin } from "@/builder/vite"
+import { builderVitePlugin } from "@/builder/vite"
+import { builderWebpackPlugin } from "@/builder/webpack"
 import type { UnpluginFactory } from "unplugin"
 import { createUnplugin } from "unplugin"
 
@@ -20,10 +21,10 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = (
     //   console.log("🚀 ~ watchChange ~ change:", change)
     // },
     writeBundle(this) {},
-    vite: createVitePlugin(options),
+    vite: builderVitePlugin(options),
     rollup: {},
     rolldown: {},
-    webpack(compiler) {},
+    webpack: builderWebpackPlugin(options),
     rspack(compiler) {},
     esbuild: {},
     farm: {},

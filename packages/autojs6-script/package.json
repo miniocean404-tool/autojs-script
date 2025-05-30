@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "auto:dev": "vite build --watch --mode development",
-    "auto:build": "vite build --mode production"
+    "auto6:dev": "vite build --watch --mode development",
+    "auto6:build": "vite build --mode production"
   },
   "keywords": [],
   "author": "",
