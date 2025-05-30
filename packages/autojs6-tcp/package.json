@@ -2,10 +2,14 @@
   "name": "autojs6-tcp",
   "version": "1.0.0",
   "description": "",
+  "module": "src/index.ts",
   "main": "src/index.ts",
   "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.11.0"
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "unplugin": "^2.3.5"
+  }
 }

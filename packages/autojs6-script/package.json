@@ -1,0 +1,17 @@
+{
+  "name": "autojs6-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "auto:dev": "vite build --watch --mode development",
+    "auto:build": "vite build --mode production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "autojs6-tcp": "workspace:*"
+  }
+}
