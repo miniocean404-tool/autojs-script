@@ -21,7 +21,8 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = (options, m
       },
     },
     watchChange(id, change) {
-      console.log(id, change)
+      console.log("🚀 ~ watchChange ~ id:", id)
+      console.log("🚀 ~ watchChange ~ change:", change)
     },
     vite: {
       // Vite plugin
@@ -56,6 +57,8 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = (options, m
     },
   }
 }
+
+console.log(createUnplugin(unpluginFactory))
 
 export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
 export default unplugin
