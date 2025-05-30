@@ -1,4 +1,7 @@
 import os from "os"
+import archiver from "archiver"
+import crypto from "crypto"
+import type { Buffer } from "buffer"
 
 export function getIPAddress() {
   const interfaces = os.networkInterfaces()
@@ -35,4 +38,15 @@ export function getIPs(): string[] {
     }
   }
   return ips
+}
+
+export function zip(source: string, target: string) {
+  const zip = archiver("zip", {
+    zlib: { level: 9 },
+  })
+  zip.finalize()
+}
+
+export function md5(data: string | Buffer) {
+  return crypto.createHash("md5").update(data).digest("hex")
 }
