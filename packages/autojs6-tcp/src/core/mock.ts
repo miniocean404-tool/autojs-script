@@ -31,3 +31,13 @@ const saveProject = {
     command: "save_project",
   },
 }
+
+// 停止后重新运行 run
+const reRun = {
+  id: 2,
+  type: "command",
+  data: {
+    id: "/Users/daihaiyang/Desktop/my-code/test/test-autojs/main.js",
+    command: "stop",
+  },
+}
