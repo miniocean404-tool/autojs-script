@@ -1,11 +1,11 @@
 import type { Plugin } from "vite"
-import { Options } from "../index"
+import { AutojsHotUpdateOptions } from "@/types/builder"
 import { zip, MD5 } from "@/utils"
 import path from "path"
 import slash from "slash"
-import { AutojsTcpCommand } from "@/core/tcp/socket"
+import { AutojsTcpCommand } from "@/core/tcp"
 
-export const builderVitePlugin = ({ ip, port }: Options): Plugin => {
+export const builderVitePlugin = ({ ip, port }: AutojsHotUpdateOptions): Plugin => {
   let root = slash(process.cwd())
   let output = ""
 

@@ -1,14 +1,14 @@
 import { fileURLToPath } from "url"
 import { defineConfig } from "vite"
 import type { UserConfig } from "vite"
-import unplugin from "unplugin-autojs-hot-update"
+import autojsHotUpdate from "unplugin-autojs-hot-update/vite"
 
 export default defineConfig((config) => {
   const isProd = config.mode === "production"
   const isDev = config.mode === "development"
 
   return {
-    plugins: [unplugin.vite({ ip: "192.168.31.146", port: 7347, mode: "tcp" })],
+    plugins: [autojsHotUpdate({ ip: "192.168.31.146", port: 7347, mode: "tcp" })],
     resolve: {
       alias: {
         "@": fileURLToPath(new URL("./src", import.meta.url)),

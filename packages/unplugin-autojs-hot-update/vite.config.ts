@@ -9,8 +9,6 @@ export default defineConfig((config) => {
   const isProd = config.mode === "production"
   const isDev = config.mode === "development"
 
-  console.log(fileURLToPath(new URL("./src", import.meta.url)))
-
   return {
     plugins: [
       dts({
@@ -22,7 +20,7 @@ export default defineConfig((config) => {
         // 将动态引入转换为静态（例如：`import('vue').DefineComponent` 转换为 `import { DefineComponent } from 'vue'`）
         staticImport: true,
         // 将所有的类型合并到一个文件中
-        rollupTypes: true,
+        rollupTypes: false,
         tsconfigPath: "./tsconfig.json",
       }),
     ],
@@ -37,7 +35,7 @@ export default defineConfig((config) => {
       cssCodeSplit: true, // 拆分 css 文件，并且 preserveModulesRoot 保留目录结构
       lib: {
         // 指定入口文件
-        entry: ["./src/index.ts"],
+        entry: ["./src/index.ts", "./src/vite.ts", "./src/webpack.ts", "./src/rollup.ts"],
         // 模块名
         name: "AUTOJS6_TCP",
         // 输出文件名

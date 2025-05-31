@@ -1,19 +1,12 @@
-import { builderVitePlugin } from "@/builder/vite"
-import { builderWebpackPlugin } from "@/builder/webpack"
+import { builderVitePlugin } from "./builder/vite"
+import { builderWebpackPlugin } from "./builder/webpack"
 import type { UnpluginFactory } from "unplugin"
 import { createUnplugin } from "unplugin"
+import type { AutojsHotUpdateOptions } from "@/types/builder"
 
-export interface Options {
-  ip: string
-  port: number
-  mode: "tcp" | "http"
-}
-
-export const unpluginFactory: UnpluginFactory<Options | undefined> = (
-  options = { ip: "127.0.0.1", port: 9317, mode: "tcp" },
-  meta,
-) => {
+const unpluginFactory: UnpluginFactory<AutojsHotUpdateOptions | undefined> = (options, meta) => {
   console.log("当前打包框架：", meta.framework)
+  if (!options) throw new Error("options 必填")
 
   return {
     name: "unplugin-autojs-hot-update",
@@ -28,5 +21,5 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = (
   }
 }
 
-export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
+const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
 export default unplugin

@@ -1,4 +1,4 @@
-import { TcpHeaderType, ServerType } from "../const"
+import { TcpHeaderType, ServerType } from "@/const/core"
 
 export function jsonify(data: Record<string, any>) {
   const data_string = JSON.stringify(data)

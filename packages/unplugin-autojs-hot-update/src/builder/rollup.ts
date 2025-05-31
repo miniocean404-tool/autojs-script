@@ -1,7 +1,7 @@
 import type { Plugin } from "rollup"
-import { Options } from "../index"
+import { AutojsHotUpdateOptions } from "@/types/builder"
 
-export const builderRollupPlugin = (options: Options): Plugin => {
+export const builderRollupPlugin = (options: AutojsHotUpdateOptions): Plugin => {
   return {
     name: "unplugin-autojs-hot-update",
     writeBundle(builderOptions, bundle) {

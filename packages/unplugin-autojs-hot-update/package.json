@@ -5,6 +5,28 @@
   "module": "dist/index.js",
   "main": "dist/index.js",
   "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./types": {
+      "import": "./dist/types/index.d.ts"
+    },
+    "./vite": {
+      "import": "./dist/vite.js",
+      "types": "./dist/vite.d.ts"
+    },
+    "./webpack": {
+      "import": "./dist/webpack.js",
+      "types": "./dist/webpack.d.ts"
+    },
+    "./rollup": {
+      "import": "./dist/rollup.js",
+      "types": "./dist/rollup.d.ts"
+    }
+  },
   "scripts": {
     "hot-update:dev": "vite build --watch --mode development",
     "hot-update:build": "vite build --mode production"

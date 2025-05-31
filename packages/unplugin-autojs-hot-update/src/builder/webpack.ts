@@ -1,7 +1,7 @@
-import { Options } from "../index"
 import type { Compiler } from "webpack"
+import type { AutojsHotUpdateOptions } from "@/types/builder"
 
-export function builderWebpackPlugin(options: Options) {
+export function builderWebpackPlugin(options: AutojsHotUpdateOptions) {
   const pluginName = "unplugin-autojs-hot-update"
 
   // 实际上是 apply 函数
