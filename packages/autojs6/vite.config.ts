@@ -1,4 +1,4 @@
-import { fileURLToPath, type resolve } from "url"
+import { fileURLToPath } from "url"
 import { defineConfig } from "vite"
 import type { UserConfig } from "vite"
 import unplugin from "unplugin-autojs-hot-update"
@@ -8,19 +8,20 @@ export default defineConfig((config) => {
   const isDev = config.mode === "development"
 
   return {
-    plugins: [unplugin.vite({ ip: "192.168.31.115", port: 7347 })],
+    plugins: [unplugin.vite({ ip: "192.168.31.146", port: 7347, mode: "tcp" })],
     resolve: {
       alias: {
         "@": fileURLToPath(new URL("./src", import.meta.url)),
       },
     },
     build: {
+      target: "",
       minify: isProd, // boolean | 'terser' | 'esbuild'
       sourcemap: isDev, // 输出单独 source文件
       cssCodeSplit: true, // 拆分 css 文件，并且 preserveModulesRoot 保留目录结构
       lib: {
         // 指定入口文件
-        entry: ["src/index.ts"],
+        entry: ["./src/index.ts"],
         // 模块名
         name: "AUTOJS6_SCRIPT",
         // 输出文件名

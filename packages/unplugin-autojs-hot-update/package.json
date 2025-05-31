@@ -4,9 +4,10 @@
   "description": "",
   "module": "dist/index.js",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "tcp:dev": "vite build --watch --mode development",
-    "tcp:build": "vite build --mode production"
+    "hot-update:dev": "vite build --watch --mode development",
+    "hot-update:build": "vite build --mode production"
   },
   "keywords": [],
   "author": "",
@@ -16,8 +17,9 @@
   "devDependencies": {
     "unplugin": "^2.3.5",
     "webpack": "5.99.9",
+    "@types/archiver": "6.0.3",
     "rollup": "4.41.1",
     "archiver": "7.0.0",
-    "@types/archiver": "6.0.3"
+    "slash": "5.1.0"
   }
 }

@@ -1,3 +1,3 @@
-export function toast(message: string) {
+export function toastTest(message: string) {
   toast(message)
 }

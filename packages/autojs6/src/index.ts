@@ -1,6 +1,5 @@
-import { toast } from "./utils/toast"
-
-toast("hello")
 const a = 1
+
+toastLog("hello world123")
 
 console.log(a)

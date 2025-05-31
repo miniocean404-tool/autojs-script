@@ -8,7 +8,7 @@
     "splashText": "Powered by AutoJs6",
     "stableMode": false
   },
-  "main": "main.js",
+  "main": "index.js",
   "name": "autojs-test",
   "optimization": {
     "removeOpenCv": false,

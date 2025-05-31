@@ -4,5 +4,5 @@ export enum TcpHeaderType {
 
 export enum ServerType {
   JSON = 1,
-  BINARY = 2,
+  BYTES = 2,
 }

@@ -1,5 +1,5 @@
 {
-  "name": "unplugin-autojs-hot-update",
+  "name": "autojs6",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,5 +11,7 @@
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.11.0",
-  "devDependencies": {}
+  "devDependencies": {
+    "unplugin-autojs-hot-update": "workspace:*"
+  }
 }

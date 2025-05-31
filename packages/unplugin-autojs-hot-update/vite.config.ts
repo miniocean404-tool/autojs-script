@@ -9,6 +9,8 @@ export default defineConfig((config) => {
   const isProd = config.mode === "production"
   const isDev = config.mode === "development"
 
+  console.log(fileURLToPath(new URL("./src", import.meta.url)))
+
   return {
     plugins: [
       dts({
@@ -35,16 +37,16 @@ export default defineConfig((config) => {
       cssCodeSplit: true, // 拆分 css 文件，并且 preserveModulesRoot 保留目录结构
       lib: {
         // 指定入口文件
-        entry: ["src/index.ts"],
+        entry: ["./src/index.ts"],
         // 模块名
         name: "AUTOJS6_TCP",
         // 输出文件名
         // fileName: (format, entryName) => `${entryName}.${format}.js`,
       },
       rollupOptions: {
-        // 将 vue 模块排除在打包文件之外，使用用这个组件库的项目的 vue 模块
+        // 将模块排除在打包文件之外
         external: [
-          ...Object.keys(pkg.devDependencies).map((d) => new RegExp(`${d}`)),
+          ...Object.keys(pkg.devDependencies).map((d) => `${d}`),
           ...builtinModules.map((m) => [`node:${m}`, m]).flat(),
         ],
         output: [

@@ -9,3 +9,7 @@
 # rolldown-vite
 
 https://mp.weixin.qq.com/s/eQWRbV236M0pPaJ3OEuyhA
+
+# 问题
+
+1. 导入 toast function 后，打包没有输出

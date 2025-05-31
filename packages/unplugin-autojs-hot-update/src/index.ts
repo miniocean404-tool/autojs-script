@@ -17,10 +17,6 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = (
 
   return {
     name: "unplugin-autojs-hot-update",
-    // watchChange(id, change) {
-    //   console.log("🚀 ~ watchChange ~ id:", id)
-    //   console.log("🚀 ~ watchChange ~ change:", change)
-    // },
     writeBundle(this) {},
     vite: builderVitePlugin(options),
     rollup: {},
