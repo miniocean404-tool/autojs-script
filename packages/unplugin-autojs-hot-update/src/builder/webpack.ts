@@ -2,7 +2,7 @@ import { Options } from "../index"
 import type { Compiler } from "webpack"
 
 export function builderWebpackPlugin(options: Options) {
-  const pluginName = "autojs-hot-update"
+  const pluginName = "unplugin-autojs-hot-update"
 
   // 实际上是 apply 函数
   return (compiler: Compiler) => {

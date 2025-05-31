@@ -1,7 +1,7 @@
 import { fileURLToPath, type resolve } from "url"
 import { defineConfig } from "vite"
 import type { UserConfig } from "vite"
-import unplugin from "autojs-hot-update"
+import unplugin from "unplugin-autojs-hot-update"
 
 export default defineConfig((config) => {
   const isProd = config.mode === "production"

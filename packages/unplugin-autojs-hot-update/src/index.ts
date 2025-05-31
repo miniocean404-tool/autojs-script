@@ -6,16 +6,17 @@ import { createUnplugin } from "unplugin"
 export interface Options {
   ip: string
   port: number
+  mode: "tcp" | "http"
 }
 
 export const unpluginFactory: UnpluginFactory<Options | undefined> = (
-  options = { ip: "127.0.0.1", port: 9317 },
+  options = { ip: "127.0.0.1", port: 9317, mode: "tcp" },
   meta,
 ) => {
   console.log("当前打包框架：", meta.framework)
 
   return {
-    name: "autojs-hot-update",
+    name: "unplugin-autojs-hot-update",
     // watchChange(id, change) {
     //   console.log("🚀 ~ watchChange ~ id:", id)
     //   console.log("🚀 ~ watchChange ~ change:", change)

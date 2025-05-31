@@ -1,5 +1,5 @@
 {
-  "name": "autojs-hot-update",
+  "name": "unplugin-autojs-hot-update",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
