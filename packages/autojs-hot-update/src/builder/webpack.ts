@@ -2,7 +2,7 @@ import { Options } from "../index"
 import type { Compiler } from "webpack"
 
 export function builderWebpackPlugin(options: Options) {
-  const pluginName = "autojs6-tcp"
+  const pluginName = "autojs-hot-update"
 
   // 实际上是 apply 函数
   return (compiler: Compiler) => {

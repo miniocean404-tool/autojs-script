@@ -1,5 +1,5 @@
 {
-  "name": "autojs6-tcp",
+  "name": "autojs-hot-update",
   "version": "1.0.0",
   "description": "",
   "module": "dist/index.js",

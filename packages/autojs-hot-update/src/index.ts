@@ -15,7 +15,7 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = (
   console.log("当前打包框架：", meta.framework)
 
   return {
-    name: "autojs6-tcp",
+    name: "autojs-hot-update",
     // watchChange(id, change) {
     //   console.log("🚀 ~ watchChange ~ id:", id)
     //   console.log("🚀 ~ watchChange ~ change:", change)

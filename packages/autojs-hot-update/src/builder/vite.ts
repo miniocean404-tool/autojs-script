@@ -4,7 +4,7 @@ import { zip } from "@/utils"
 
 export const builderVitePlugin = (options: Options): Plugin => {
   return {
-    name: "autojs6-tcp",
+    name: "autojs-hot-update",
     writeBundle(options, bundle) {
       const { dir } = options
       if (dir) {

@@ -1,7 +1,7 @@
 import { fileURLToPath, type resolve } from "url"
 import { defineConfig } from "vite"
 import type { UserConfig } from "vite"
-import unplugin from "autojs6-tcp"
+import unplugin from "autojs-hot-update"
 
 export default defineConfig((config) => {
   const isProd = config.mode === "production"

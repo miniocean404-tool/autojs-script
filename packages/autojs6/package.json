@@ -1,5 +1,5 @@
 {
-  "name": "autojs6-script",
+  "name": "autojs-hot-update",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,5 @@
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.11.0",
-  "devDependencies": {
-    "autojs6-tcp": "workspace:*"
-  }
+  "devDependencies": {}
 }
