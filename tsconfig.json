@@ -33,6 +33,6 @@
     "noFallthroughCasesInSwitch": true, // 检查 switch 语句中的 case 是否“贯穿”（即没有显式使用 break 或 return 等终止语句）。如果发现未处理的贯穿，会抛出编译错误
     "noUncheckedSideEffectImports": false // false 时（默认值），允许导入可能带有副作用（Side Effects）的模块而不需要显式标记。如果设置为 true，TypeScript 会要求所有导入的模块必须显式声明是否有副作用（例如通过 "sideEffects": false 在 package.json 中标记）。
   },
-  "include": ["./scripts"],
+  "include": ["./packages"],
   "compileOnSave": false
 }

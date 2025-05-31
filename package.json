@@ -18,5 +18,10 @@
     "axios": "1.9.0",
     "@autojs/types-pro8": "8.8.0",
     "vite-plugin-dts": "4.5.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@latest"
+    }
   }
 }
